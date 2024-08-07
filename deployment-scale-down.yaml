@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-deployment
   annotations:
-    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/sync-wave: "-2"
   labels:
     app: my-app
 spec:
