@@ -5,19 +5,19 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
   labels:
-    app: my-app-v2
+    app: my-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: my-app-v2
+      app: my-app
   template:
     metadata:
       labels:
-        app: my-app-v2
+        app: my-app
     spec:
       containers:
-        - name: my-container
+        - name: my-container-2
           image: nginx:latest
           ports:
             - containerPort: 80
